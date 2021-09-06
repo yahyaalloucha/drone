@@ -1,0 +1,20 @@
+.Logo {
+  display: flex;
+  background-color: black;
+  margin-left: 5vw;
+}
+.Logo_img {
+  align-self: flex-start;
+
+  color: blue;
+}
+.Navbar {
+  background-color: violet;
+}
+.p {
+  display: flex;
+  margin-left: 5vw;
+  background-color: blue;
+}
+@media (min-width: 1000px) {
+}
