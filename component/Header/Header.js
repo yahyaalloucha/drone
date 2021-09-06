@@ -4,58 +4,63 @@ import Image from "next/image";
 import Logo from "../../public/images/Logo.webp";
 import { Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
+import Drawer from "@material-ui/core/Drawer";
+import React, { useState } from "react";
+import { RiMenuLine } from "react-icons/ri";
+import { FiSearch } from "react-icons/Fi";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
   return (
-    <div>
-      <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand className={Style.Logo}>
-          <Image src={Logo} width={60} height={60} />
-        </Navbar.Brand>
-
-        <Navbar.Toggle
-          className="toggle-btn"
-          aria-controls="responsive-navbar-nav"
+    <div className={Style.bigcontainer}>
+      <div className={Style.container}>
+        <img
+          src={"/images/Logo.webp"}
+          className={Style.Logo}
+          width={60}
+          height={60}
         />
 
-        <Navbar.Collapse
-          className={Style.Navbar + " collapse"}
-          id="responsive-navbar-nav"
-        >
+        <div className={Style.Navbar}>
           <p className={Style.p}>Products</p>
           <p className={Style.p}>Products</p>
           <p className={Style.p}>Info</p>
           <p className={Style.p}>Benifits</p>
           <p className={Style.p}>Store</p>
-        </Navbar.Collapse>
-      </Navbar>
+        </div>
+        <span className={Style.input}>
+          <input type="text" className={Style.in} required />
+          <FiSearch className={Style.searchicon} />
+        </span>
+      </div>
 
-      {/*<Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand>
-          <div className={Style.Logo}>
-            <Link href="/">
-              <Image className={Style.Logo_img} src={Logo} />
-            </Link>
-          </div>
-        </Navbar.Brand>
-
-        <Navbar.Toggle
-          className="toggle-btn"
-          aria-controls="responsive-navbar-nav"
+      <div className={Style.Drawer}>
+        <img
+          src={"/images/Logo.webp"}
+          className={Style.Logo}
+          width={60}
+          height={60}
         />
-
-        <Navbar.Collapse className="collapse" id="responsive-navbar-nav">
-          <div className={Style.Navbar}>
-            <Nav className="Navbar">
+        <React.Fragment className={Style.reactfra}>
+          <div className={Style.butt} onClick={() => setOpen(true)}>
+            <RiMenuLine className={Style.searchicon} />
+          </div>
+          <Drawer
+            anchor="right"
+            open={open}
+            onClose={() => setOpen(false)}
+            style={{ backgroundColor: "transparent" }}
+          >
+            <div className={Style.Navbar}>
               <p className={Style.p}>Products</p>
               <p className={Style.p}>Products</p>
               <p className={Style.p}>Info</p>
               <p className={Style.p}>Benifits</p>
               <p className={Style.p}>Store</p>
-            </Nav>
-          </div>
-        </Navbar.Collapse>
-</Navbar>*/}
+            </div>
+          </Drawer>
+        </React.Fragment>
+      </div>
     </div>
   );
 }

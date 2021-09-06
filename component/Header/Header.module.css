@@ -1,20 +1,96 @@
+.bigcontainer {
+  flex-direction: row;
+  align-items: center;
+}
+.container {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.Drawer {
+  display: none;
+}
+
 .Logo {
   display: flex;
-  background-color: black;
-  margin-left: 5vw;
-}
-.Logo_img {
-  align-self: flex-start;
 
-  color: blue;
+  margin: 0px;
+  margin-left: 80px !important;
 }
+
 .Navbar {
-  background-color: violet;
+  flex-direction: row;
+  display: flex;
+  margin-top: 1vw;
 }
 .p {
   display: flex;
   margin-left: 5vw;
-  background-color: blue;
 }
-@media (min-width: 1000px) {
+.input {
+  width: 275px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  background: rgba(196, 196, 196, 0.3);
+  border-radius: 8px;
+  margin-right: 3vw;
+}
+.in {
+  width: 80%;
+  height: 80%;
+  padding-left: 10%;
+  align-self: center;
+  background: transparent !important;
+  outline: none !important;
+  border: none !important;
+}
+.searchicon {
+  margin-left: 1.5vw;
+  width: 2em;
+  height: 2em;
+}
+@media (max-width: 1000px) {
+  .container {
+    display: none;
+  }
+  .Drawer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+  .reactfra {
+    background-color: transparent;
+  }
+  .butt {
+    margin-right: 4vw !important;
+  }
+  .icon {
+    width: 3em;
+    height: 5em;
+  }
+  .Navbar {
+    background-color: transparent !important;
+
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+  }
+  .p {
+    background-color: transparent;
+    font-size: 25px;
+    margin-right: 5vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .Logo {
+    display: flex;
+    background-color: black;
+    margin: 0px;
+    margin-left: 10px !important;
+  }
 }
