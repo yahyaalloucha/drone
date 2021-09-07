@@ -28,10 +28,15 @@ export default function Header() {
           <p className={Style.p}>Benifits</p>
           <p className={Style.p}>Store</p>
         </div>
-        <span className={Style.input}>
-          <input type="text" className={Style.in} required />
+        <div className={Style.input}>
+          <input
+            type="text"
+            name="search"
+            placeholder="Search.."
+            className={Style.in}
+          />
           <FiSearch className={Style.searchicon} />
-        </span>
+        </div>
       </div>
 
       <div className={Style.Drawer}>
@@ -41,6 +46,15 @@ export default function Header() {
           width={60}
           height={60}
         />
+        <div className={Style.input}>
+          <input
+            type="text"
+            name="search"
+            placeholder="Search.."
+            className={Style.in}
+          />
+          <FiSearch className={Style.searchicon} />
+        </div>
         <React.Fragment className={Style.reactfra}>
           <div className={Style.butt} onClick={() => setOpen(true)}>
             <RiMenuLine className={Style.searchicon} />
