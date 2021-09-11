@@ -28,7 +28,7 @@ export default function Header() {
           <p className={Style.p}>Benifits</p>
           <p className={Style.p}>Store</p>
         </div>
-        <div className={Style.input}>
+        {/*<div className={Style.input}>
           <input
             type="text"
             name="search"
@@ -36,6 +36,16 @@ export default function Header() {
             className={Style.in}
           />
           <FiSearch className={Style.searchicon} />
+  </div>*/}
+        <div className={Style.searchbox}>
+          <button className={Style.btnsearch}>
+            <FiSearch className={Style.searchicon} />
+          </button>
+          <input
+            type="text"
+            className={Style.inputsearch}
+            placeholder="Type to Search..."
+          />
         </div>
       </div>
 
@@ -46,18 +56,13 @@ export default function Header() {
           width={60}
           height={60}
         />
-        <div className={Style.input}>
-          <input
-            type="text"
-            name="search"
-            placeholder="Search.."
-            className={Style.in}
-          />
-          <FiSearch className={Style.searchicon} />
-        </div>
+
         <React.Fragment className={Style.reactfra}>
           <div className={Style.butt} onClick={() => setOpen(true)}>
-            <RiMenuLine className={Style.searchicon} />
+            <RiMenuLine
+              className={Style.navicon}
+              Style={{ backgroundColor: "red" }}
+            />
           </div>
           <Drawer
             anchor="right"
@@ -71,6 +76,16 @@ export default function Header() {
               <p className={Style.p}>Info</p>
               <p className={Style.p}>Benifits</p>
               <p className={Style.p}>Store</p>
+            </div>
+            <div className={Style.searchbox}>
+              <button className={Style.btnsearch}>
+                <FiSearch className={Style.searchicon} />
+              </button>
+              <input
+                type="text"
+                className={Style.inputsearch}
+                placeholder="Type to Search..."
+              />
             </div>
           </Drawer>
         </React.Fragment>
