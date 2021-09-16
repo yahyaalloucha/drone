@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import Drawer from "@material-ui/core/Drawer";
 import React, { useState } from "react";
 import { RiMenuLine } from "react-icons/ri";
-import { FiSearch } from "react-icons/Fi";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -36,9 +35,7 @@ export default function Header() {
           <FiSearch className={Style.searchicon} />
   </div>*/}
         <div className={Style.searchbox}>
-          <button className={Style.btnsearch}>
-            <FiSearch className={Style.searchicon} />
-          </button>
+          <button className={Style.btnsearch}></button>
           <input
             type="text"
             className={Style.inputsearch}
@@ -55,7 +52,7 @@ export default function Header() {
           height={60}
         />
 
-        <React.Fragment className={Style.reactfra}>
+        <div className={Style.reactfra}>
           <div className={Style.butt} onClick={() => setOpen(true)}>
             <RiMenuLine
               className={Style.navicon}
@@ -86,7 +83,7 @@ export default function Header() {
               />
             </div>
           </Drawer>
-        </React.Fragment>
+        </div>
       </div>
     </div>
   );
