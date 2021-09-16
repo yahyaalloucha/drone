@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Style from "./Header.module.css";
-import Image from "next/image";
-import Logo from "../../public/images/Logo.webp";
-import { Navbar, Nav } from "react-bootstrap";
+
 import "bootstrap/dist/css/bootstrap.css";
 import Drawer from "@material-ui/core/Drawer";
 import React, { useState } from "react";

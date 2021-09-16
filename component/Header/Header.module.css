@@ -1,6 +1,9 @@
 .bigcontainer {
   flex-direction: row;
   align-items: center;
+  position: fixed;
+  z-index: 3 !important;
+  width: 100vw;
 }
 .container {
   display: flex;
@@ -26,7 +29,6 @@
   display: flex;
   margin-top: 1vw;
   margin-left: 10%;
-  background-color: turquoise;
 }
 .p {
   display: flex;
