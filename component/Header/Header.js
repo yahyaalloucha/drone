@@ -73,9 +73,7 @@ export default function Header() {
               <p className={Style.p}>Store</p>
             </div>
             <div className={Style.searchbox}>
-              <button className={Style.btnsearch}>
-                <FiSearch className={Style.searchicon} />
-              </button>
+              <button className={Style.btnsearch}></button>
               <input
                 type="text"
                 className={Style.inputsearch}
