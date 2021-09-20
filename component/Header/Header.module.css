@@ -102,6 +102,9 @@
   .container {
     display: none;
   }
+  .Logo {
+    width: 10%;
+  }
   .Drawer {
     display: flex;
     align-items: center;
@@ -152,7 +155,7 @@
 @media (max-width: 700px) {
   .Logo {
     display: flex;
-
+    width: 15%;
     margin: 0px;
     margin-left: 10px !important;
   }

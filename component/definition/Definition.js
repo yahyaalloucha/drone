@@ -1,6 +1,7 @@
 import { styled } from "@material-ui/styles";
 import { urlObjectKeys } from "next/dist/shared/lib/utils";
 import Style from "./Definitin.module.css";
+
 export default function Definition({ def }) {
   console.log(def);
   return (
