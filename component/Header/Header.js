@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Style from "./Header.module.css";
+import Image from "next/image";
 
 import "bootstrap/dist/css/bootstrap.css";
 import Drawer from "@material-ui/core/Drawer";
@@ -12,10 +13,9 @@ export default function Header() {
     <div className={Style.bigcontainer}>
       <div className={Style.container}>
         <img
-          src={"/images/Logo.webp"}
+          src={"/images/Logo.png"}
           className={Style.Logo}
-          width={60}
-          height={60}
+          
         />
 
         <div className={Style.Navbar}>
@@ -25,17 +25,11 @@ export default function Header() {
           <p className={Style.p}>Benifits</p>
           <p className={Style.p}>Store</p>
         </div>
-        {/*<div className={Style.input}>
-          <input
-            type="text"
-            name="search"
-            placeholder="Search.."
-            className={Style.in}
-          />
-          <FiSearch className={Style.searchicon} />
-  </div>*/}
+
         <div className={Style.searchbox}>
-          <button className={Style.btnsearch}></button>
+          <button className={Style.btnsearch}>
+            <img src="/images/searchicon.png" className={Style.searchicon} />
+          </button>
           <input
             type="text"
             className={Style.inputsearch}
@@ -46,7 +40,7 @@ export default function Header() {
 
       <div className={Style.Drawer}>
         <img
-          src={"/images/Logo.webp"}
+          src={"/images/Logo.png"}
           className={Style.Logo}
           width={60}
           height={60}
@@ -56,7 +50,7 @@ export default function Header() {
           <div className={Style.butt} onClick={() => setOpen(true)}>
             <RiMenuLine
               className={Style.navicon}
-              Style={{ backgroundColor: "red" }}
+              style={{ backgroundColor: "red" }}
             />
           </div>
           <Drawer
@@ -73,7 +67,12 @@ export default function Header() {
               <p className={Style.p}>Store</p>
             </div>
             <div className={Style.searchbox}>
-              <button className={Style.btnsearch}></button>
+              <button className={Style.btnsearch}>
+                <img
+                  src="/images/searchicon.png"
+                  className={Style.searchicon}
+                />
+              </button>
               <input
                 type="text"
                 className={Style.inputsearch}

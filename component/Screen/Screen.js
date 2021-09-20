@@ -9,11 +9,9 @@ export default function Screen({ info }) {
   return (
     <div className={Style.Screen}>
       {info?.length > 0 && (
-        <div className={Style.ReactPlayer}>
-          <video className={Style.Video} autoplay muted>
-            <source src={info[0].videoUrl} type="video/mp4" />
-          </video>
-        </div>
+        <video className={Style.Video} autoPlay muted loop={true}>
+          <source src={info[0].videoUrl} type="video/mp4" />
+        </video>
       )}
     </div>
   );
