@@ -1,9 +1,11 @@
 import { styled } from "@material-ui/styles";
 import { urlObjectKeys } from "next/dist/shared/lib/utils";
 import Style from "./Definitin.module.css";
+import About from "../About/About";
+import { AppBar } from "@material-ui/core";
+import { red } from "@material-ui/core/colors";
 
-export default function Definition({ def }) {
-  console.log(def);
+export default function Definition({ def, about }) {
   return (
     <div className={Style.container}>
       {def?.length > 0 && (
@@ -19,6 +21,7 @@ export default function Definition({ def }) {
           <div className={Style.definition}>
             <p>{def[0].description}</p>
           </div>
+          <About aboutdiv={about} />
         </div>
       )}
     </div>

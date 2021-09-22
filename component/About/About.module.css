@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10%;
+  width: 100%;
+
+  justify-content: space-around;
+}
+.cardrules {
+  background-color: aqua;
+  width: 25%;
+  height: 504px;
+  align-self: center;
+  margin-left: 5%;
+  border-radius: 20px;
+  transform: scale();
+  border: 5px solid rgb(3, 3, 31);
+}
+.cardrules:hover {
+  transform: scale(1.05);
+}
+.cardbestcompanies {
+  background-color: blueviolet;
+  width: 25%;
+  height: 500px;
+  margin-left: 20%;
+  border-radius: 20px;
+
+  border: 5px solid rgb(3, 3, 31);
+}
+.cardbestcompanies:hover {
+  transform: scale(1.05);
+}
+.h1 {
+  color: whitesmoke;
+  align-self: center;
+  text-align: center;
+  text-shadow: 3px 3px 3px rgb(90, 9, 72);
+}
+.p {
+  color: whitesmoke;
+  font-size: 25px;
+  margin-top: 15%;
+  width: 95%;
+  margin-left: 5%;
+}
+.learnmore {
+  color: whitesmoke;
+  text-align: center;
+  cursor: pointer;
+}
+.learnmore:hover {
+  transform: scale(2.05);
+  text-shadow: 3px 3px 3px rgb(90, 9, 72);
+}
+@media (max-width: 700px) {
+  .cardrules {
+    width: 40%;
+    height: 400px;
+  }
+}

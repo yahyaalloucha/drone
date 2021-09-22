@@ -18,13 +18,20 @@ const def = `*[_type=='definition'] {
    description
  
 }`;
+const aboutdiv = `*[_type=='about'] {
+  title,
+  info,
+ "posterImage":poster.asset->url
+}
+`;
 
-export default function Home({ information, definition }) {
+export default function Home({ information, definition, about }) {
   console.log(information);
   console.log(definition);
 
   const info = { information };
   const def = { definition };
+  const ab = { about };
 
   return (
     <div
@@ -47,18 +54,19 @@ export default function Home({ information, definition }) {
         />
       </Head>
       <Screen info={information} />
-      <Definition def={definition} />
-      <div>myyyyy</div>
+      <Definition def={definition} about={about} />
     </div>
   );
 }
 export async function getStaticProps() {
   const information = await client.fetch(data);
   const definition = await client.fetch(def);
+  const about = await client.fetch(aboutdiv);
   return {
     props: {
       information,
       definition,
+      about,
     },
   };
 }
