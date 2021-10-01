@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Style from "./Header.module.css";
-import Image from "next/image";
-
 import "bootstrap/dist/css/bootstrap.css";
 import Drawer from "@material-ui/core/Drawer";
 import React, { useState } from "react";
@@ -12,17 +10,15 @@ export default function Header() {
   return (
     <div className={Style.bigcontainer}>
       <div className={Style.container}>
-        <img
-          src={"/images/Logo.png"}
-          className={Style.Logo}
-          
-        />
+        <img src={"/images/Logo.png"} className={Style.Logo} />
 
         <div className={Style.Navbar}>
-          <p className={Style.p}>Products</p>
-          <p className={Style.p}>Products</p>
+          <Link href="/Products">
+            <p className={Style.p}>Products</p>
+          </Link>
           <p className={Style.p}>Info</p>
           <p className={Style.p}>Benifits</p>
+          <p className={Style.p}>Contact</p>
           <p className={Style.p}>Store</p>
         </div>
 
@@ -48,10 +44,7 @@ export default function Header() {
 
         <div className={Style.reactfra}>
           <div className={Style.butt} onClick={() => setOpen(true)}>
-            <RiMenuLine
-              className={Style.navicon}
-              style={{ backgroundColor: "red" }}
-            />
+            <RiMenuLine className={Style.navicon} />
           </div>
           <Drawer
             anchor="right"

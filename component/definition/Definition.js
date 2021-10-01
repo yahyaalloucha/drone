@@ -5,7 +5,7 @@ import About from "../About/About";
 import { AppBar } from "@material-ui/core";
 import { red } from "@material-ui/core/colors";
 
-export default function Definition({ def, about }) {
+export default function Definition({ def, about, card1, card2 }) {
   return (
     <div className={Style.container}>
       {def?.length > 0 && (
@@ -21,7 +21,7 @@ export default function Definition({ def, about }) {
           <div className={Style.definition}>
             <p>{def[0].description}</p>
           </div>
-          <About aboutdiv={about} />
+          <About aboutdiv={about} card1={card1} card2={card2} />
         </div>
       )}
     </div>

@@ -7,10 +7,67 @@
 
   justify-content: space-around;
 }
+.containercard1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+
+  background-color: black;
+  margin-left: 20%;
+  margin-top: 6%;
+  border-radius: 20px;
+  overflow: auto !important;
+}
+
+.imgcard1 {
+  width: 80%;
+  height: 400px;
+  align-self: center;
+
+  margin-top: 5%;
+}
+.headercard {
+  margin-top: 2%;
+  color: whitesmoke;
+  text-align: center;
+  text-shadow: 3px 3px 3px rgb(90, 9, 72);
+}
+
+.companies {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-self: flex-start;
+}
+.namecompany {
+  margin-top: 2%;
+  color: whitesmoke !important;
+  text-align: center;
+  text-shadow: 3px 3px 3px rgb(90, 9, 72);
+  align-self: flex-start;
+  margin-left: 5%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.description {
+  text-align: start;
+  width: 90%;
+  margin-left: 8%;
+  color: azure;
+}
+
+.dd {
+  background-color: transparent;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+}
 .cardrules {
-  background-color: aqua;
   width: 25%;
-  height: 504px;
+  height: 500px;
   align-self: center;
   margin-left: 5%;
   border-radius: 20px;
@@ -21,10 +78,9 @@
   transform: scale(1.05);
 }
 .cardbestcompanies {
-  background-color: blueviolet;
   width: 25%;
   height: 500px;
-  margin-left: 20%;
+
   border-radius: 20px;
 
   border: 2px solid rgb(3, 3, 31);
@@ -58,5 +114,27 @@
   .cardrules {
     width: 40%;
     height: 410px;
+  }
+  .cardbestcompanies {
+    width: 40%;
+    height: 410px;
+    margin-right: 5%;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+  .cardrules {
+    margin-top: 8%;
+    width: 70%;
+    margin-left: 0%;
+  }
+
+  .cardbestcompanies {
+    width: 70%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 5%;
   }
 }

@@ -1,0 +1,10 @@
+.containercard1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  height: 80%;
+  background-color: aqua;
+  margin-left: 20%;
+  margin-top: 6%;
+}

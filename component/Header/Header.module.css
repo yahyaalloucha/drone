@@ -22,8 +22,8 @@
 
   margin: 0px;
   margin-left: 5% !important;
-  width: 3%;
-  height: 3%;
+  width: 4%;
+  height: 4%;
 }
 
 .Navbar {
@@ -35,6 +35,10 @@
 .p {
   display: flex;
   margin-left: 5vw;
+  font-weight: bolder;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
 }
 
 .searchicon {

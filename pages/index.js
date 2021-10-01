@@ -24,14 +24,23 @@ const aboutdiv = `*[_type=='about'] {
  "posterImage":poster.asset->url
 }
 `;
+const cardcompany = `*[_type=='cardabout1'] {
+  titofdef,
+  description,
+  Url,
+  "posterImage":poster.asset->url
+}`;
+const cardrules = `*[_type=='cardabout2'] {
+  titofdef,
+   description,
+   "posterImage":poster.asset->url
+ }`;
 
-export default function Home({ information, definition, about }) {
-  console.log(information);
-  console.log(definition);
-
+export default function Home({ information, definition, about, card1, card2 }) {
   const info = { information };
   const def = { definition };
   const ab = { about };
+  console.log(card2);
 
   return (
     <div
@@ -54,7 +63,7 @@ export default function Home({ information, definition, about }) {
         />
       </Head>
       <Screen info={information} />
-      <Definition def={definition} about={about} />
+      <Definition def={definition} about={about} card1={card1} card2={card2} />
     </div>
   );
 }
@@ -62,11 +71,15 @@ export async function getStaticProps() {
   const information = await client.fetch(data);
   const definition = await client.fetch(def);
   const about = await client.fetch(aboutdiv);
+  const card1 = await client.fetch(cardcompany);
+  const card2 = await client.fetch(cardrules);
   return {
     props: {
       information,
       definition,
       about,
+      card1,
+      card2,
     },
   };
 }
